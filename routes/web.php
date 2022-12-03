@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NotificacaoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TesteController;
 
@@ -22,9 +23,10 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     Route::get('/test', [TesteController::class, 'index'] );
+    Route::get('/notificacao', [NotificacaoController::class, 'index'] );
 });
 
-Route::get('/test', function () {
+Route::get('/test2', function () {
     return view('teste');
 });
 Auth::routes();

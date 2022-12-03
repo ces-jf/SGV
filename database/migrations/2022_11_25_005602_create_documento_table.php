@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('documentos', function (Blueprint $table) {
-            $table->id('id_Documentacao');
+            $table->id();
             $table->string('convenio_doc');
             $table->string('relatorio_estagio_semestral_doc');
             $table->string('termo_estagio_doc');

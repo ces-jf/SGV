@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('vagas', function (Blueprint $table) {
-            $table->id('id_vaga');
+            $table->id();
             $table->foreignId('fk_concedente_id');
             $table->string('descricao');
             $table->string('turno_horario');

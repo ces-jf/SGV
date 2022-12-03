@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('concedentes', function (Blueprint $table) {
-            $table->id('id_concedente');
+            $table->id();
             $table->foreignId('fk_pessoa_id');
             $table->foreignId('fk_endereco_id');
             $table->boolean('profissional_liberal');

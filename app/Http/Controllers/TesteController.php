@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Notifiable;
+use \TCG\Voyager\Models\User;
 
 class TesteController extends Controller
 {
@@ -11,9 +13,11 @@ class TesteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    protected $user;
+    public function index(User $user)
     {
         //
+        $this->user->notify(new notificaUni($user));
         return view("teste");
     }
 
